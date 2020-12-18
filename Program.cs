@@ -9,6 +9,7 @@ namespace interfaces
         {
            Carrinho carrinho = new Carrinho();
 
+            Console.ForegroundColor = ConsoleColor.Red;
             Produto produto1 = new Produto();
             produto1.Codigo = 123;
             produto1.Nome = "Playstation 5";
@@ -23,18 +24,16 @@ namespace interfaces
             produto3.Codigo = 125;
             produto3.Nome = "Nintendo Switch";
             produto3.Preco = 5000;
-
-            Console.ResetColor();
             
             carrinho.Cadastrar(produto1);
             carrinho.Cadastrar(produto2);
             carrinho.Listar();
 
-            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.Green;
             carrinho.Alterar(produto2.Codigo, produto3);
             carrinho.Listar();
 
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             carrinho.Remover(produto1.Codigo);
             carrinho.Listar();
         }
